@@ -1,0 +1,65 @@
+{{#if home}}
+	<div id="homeContainer">
+    {{#recipes}}
+        <div class="recipeBlock" id="">
+	        <img src="{{assetPath}}/{{id}}/{{id}}.jpg" alt="{{name}}" />
+        	<div class="recipeName">
+        		<p>{{name}}</p>
+        	</div>
+        </div>
+    {{/recipes}}
+    </div>
+{{else}}
+    <div id="detailContainer">
+        {{#currentRecipe}}
+            <header id="mainPicture">
+                <img src="{{assetPath}}/{{id}}/{{id}}.jpg" alt="{{name}}" />
+                <div class="detailRecipeName">
+                    <p>{{name}}</p>
+                </div>
+            </header>
+            <div id="recipeContents">
+                <h3>Introduction</h3>
+                <div class="recipeChapter">
+                    {{#introduction}}
+                        <p>{{{.}}}</p>
+                    {{/introduction}}
+                </div>
+                <h3>Ingredients</h3>
+                <div class="recipeChapter">
+                    <table>
+                    {{#ingredients}}
+                        <tr>
+                        <td>{{ingredient}}</td>
+                        <td>{{uk}}</td>
+                        <td>{{us}}</td>
+                        </tr>
+                    {{/introduction}}
+                    </table>
+                </div>
+                <h3>Methods</h3>
+                <div class="recipeChapter">
+                    <ul>
+                    {{#methods:num}}
+                        <li>
+                            <p>{{num+1}}</p>
+                            <p>{{{text}}}</p>
+                            {{#photos}}
+                                <img src="{{assetPath}}/{{id}}/{{filename}}.jpg" class="methodImage image-{{size}}" alt="{{filename}}" />
+                            {{/photos}}
+                        </li>
+                    {{/methods}}
+                    </ul>
+                </div>
+                <h3>Introduction</h3>
+                <div class="recipeChapter">
+                    {{#introduction}}
+                        <p>{{{.}}}</p>
+                    {{/introduction}}
+                </div>
+            </div>
+        {{/currentRecipe}}
+    </div>
+
+
+{{/if}}
