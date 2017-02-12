@@ -1,15 +1,28 @@
+@font-face {
+    font-family: 'Avenir Web';
+    src: url(../assets/fonts/avenir-roman.ttf);
+}
+
 body{
-	font-family:Futura;
+	font-family:'Avenir Web', Helvetica, Arial, sans-serif;
 	margin:0;
+	-webkit-font-smoothing:antialiased;
 }
 *,* *{
 	box-sizing:border-box;
 }
 #wrapper{
 	margin:0 20px;
+	max-width:1160px;
 }
 h1{
 	text-align: center;
+	font-family:Futura, Helvetica, Arial, sans-serif;
+}
+h3{
+	font-family:Futura, Helvetica, Arial, sans-serif;
+	font-weight:normal;
+	margin-bottom:0.2em;
 }
 
 .recipeBlock{
@@ -75,6 +88,56 @@ h1{
 	}
 }
 
+.recipeChapter{
+	margin-bottom:40px;
+	p{
+		line-height:1.5em;
+	}
+	#ingredients{
+		width:100%;
+		border-collapse:collapse;
+		tr{
+			border-bottom:1px solid #dfdfdf;
+			height:40px;
+			&:last-child{
+				border-bottom:none;
+			}
+		}
+		.measure{
+			text-align: right;
+		}
+	}
+	ul{
+		padding:0;
+		list-style:none;
+		.methodStep{
+			margin-bottom:40px;
+		}
+		.methodNumber{
+			font-weight:bold;
+		}
+		img{
+			width:100%;
+		}
+	}
+}
+
+@media(min-width:500px){
+	#recipeContents{
+		max-width:460px;
+		margin:0 auto;
+	}
+	.methodImage{
+		&.image-s{
+			width:49%;
+			margin-right:2%;
+			&:nth-of-type(2n+2){
+				margin-right:0;
+			}
+		}
+	}
+}
+
 @media(min-width:640px){
 	.recipeBlock{
 		float:left;
@@ -83,5 +146,25 @@ h1{
 		&:nth-of-type(2n+2){
 			margin-right:0;
 		}
+
+	}
+
+	h3{
+		font-size:28px;
+	}
+	.recipeChapter{
+		
+		.methodNumber{
+			position: absolute;
+			left:-20px;
+		}
+		p{
+			position: relative;
+		}
+	}
+}
+@media(min-width:1200px){
+	#wrapper{
+		margin:0 auto;
 	}
 }

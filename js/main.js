@@ -1,10 +1,11 @@
-var recepten = [{"recipe_id":"raspberryfriands","recipe_name":"Raspberry Friands","introduction":"Lily Vanilli’s second book ‘Sweet Tooth’ is a perfect combination of baking techniques, recipes and tips. The first recipe I tried out was her redcurrant friands recipe, which resulted in pretty, chewy and light cakes. I especially love the generous amount of lemon zest used. The only thing I changed was swapping the redcurrants for raspberries. This recipe makes 12 friands, but you can easily half the recipe as I did, as shown in the pictures.","ingredients":"Plain flour, 90gr, 180gr\nIcing sugar, 40gr, 13gr","methods":"Preheat the oven to 180°C, fan assisted. Grease the cupcake tray. [photos=whisk#s,cream#m,bloodoranges#l]\n\nWhisk together the flour and icing sugar in a bowl, then whisk in the salt, ground almonds and lemon zest.","data_crunch":"","data_sweetness":""}];
+var recepten = [{"recipe_id":"raspberryfriands","recipe_name":"Raspberry Friands","introduction":"Lily Vanilli’s second book ‘Sweet Tooth’ is full of baking technique essentials, original recipes and tips - a perfect combination. Her redcurrant friands recipe results in pretty, chewy cakes that are full of flavour. You better make sure to grab the largest lemon you can find and zest every inch of it, as the zest works just perfectly with the rich ground almonds. The original recipe makes 12 friands, but since the recipe is easy to half, I usually make 6 and it works perfectly. ","ingredients":"For 6 friands\n\nPlain flour, 45g\nIcing sugar, 100g\nPinch of sea salt\nGround almonds, 90g\nGrated zest of 1 lemon\n3 medium egg whites\nUnsalted butter, 100g\n\n12 raspberries\nHandful of flaked almonds\n\n6-hole or 12-hole cupcake tray","methods":"Preheat the oven to 180°C, fan assisted. Grease the cupcake tray.\n\nMelt the butter with lemon zest. Leave to cool. [photos=raspberryfriands1#s,raspberryfriands2#s]\n\nMix the flour with the icing sugar and sift into a large bowl. Add a pinch of salt and the ground almonds, mix well and set aside. [photos=raspberryfriands3#m]\n\nWhip up the egg whites. Mix until you have stiff peaks. [photos=raspberryfriands4#s,raspberryfriands5#s]\n\nFold the egg whites into the flour mix. [photos=raspberryfriands6#m]\n\nSlowly mix in the cooled butter. Getting the butter to incorporate into the batter can take a bit long, so try this: first put about 1/4 of the batter into the melted butter, and mix well. Then pour this mixture into the large bowl of batter and stir. [photos=raspberryfriands7#m]\n\nSpoon, pipe, or simply pour the batter into the cupcake tray. Neatly arrange the raspberries and flaked almonds on top. Bake in the oven for about 20 minutes, check after 15 minutes. They are ready when a skewer inserted into the centre comes out clean.\n\nTake out of the oven and leave to cool in the tin for about 10 minutes. Then put them on a wired rack to cool completely, or better, eat them while still warm. [photos=raspberryfriands8#m]\n\nSlightly adapted from Redcurrant Friands by Lily Vanilli (Sweet Tooth)\n","data_crunch":"","data_sweetness":"","color_main":"","color_accent":""}]
 processData();
 // Tabletop.init({ 
 // 	key: '1_zYMEbsB4REbLtF6zZC9uibh8-waNa22fzvAUDBrWsI',
 // 	wanted: ['recepten'],
 // 	callback: function(data, tabletop) { 
 // 		recepten = data.recepten.elements;
+// 		console.log(JSON.stringify(recepten));
 // 		processData();
 // 	}
 // })
@@ -85,7 +86,7 @@ function processData(){
 		return recipe;
 	})
 	recepten = processedRecepten;
-	console.log(recepten[0]);
+	
 	render();
 }
 
